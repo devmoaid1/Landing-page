@@ -249,3 +249,29 @@ section.active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+
+@media(max-width:370px){
+    
+    body{
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    nav{
+        height: 0;
+    }
+    .navbar__menu ul{
+        padding: 0px;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-items: flex-end;
+        
+    }
+    /* .navbar__menu li{
+       
+        
+    } */
+
+}

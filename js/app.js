@@ -1,21 +1,23 @@
-
-
+// global variables 
 
 const sections=document.querySelectorAll('section') // all sections 
 const fragment = document.createDocumentFragment()
 const navBar=document.getElementById('navbar__list') // nav bar container
 
+
+
 // generate nav items based on sections
 const generateNavItems=(sectionsList)=>{
    
     sectionsList.forEach((item,index)=>{
-        const navItem=document.createElement('a') // create a div containe for nav item
+        const navItemHolder=document.createElement('li')
+        const navItem=document.createElement('a') // create a anchor for nav item
         navItem.setAttribute('class',"nav_item") // set a class for css styling
         navItem.setAttribute('href','#'+item.id) // for navigation to section 
         
         navItem.textContent=item.firstElementChild.firstElementChild.textContent // content refers for section heading 
-            
-        fragment.appendChild(navItem) // append new navItem to fragment
+        navItemHolder.appendChild(navItem)
+        fragment.appendChild(navItemHolder) // append new navItem to fragment
     })
 } 
 
@@ -58,15 +60,16 @@ const updateSectionClassActive=()=>{
 // handle click event on navItem
 const handleNavItemClick=event=>{
     const section = document.querySelector(event.target.attributes['href'].value)
-    section.setAttribute('class','your-active-class')
+    section.setAttribute('class','active-class') // for active state 
 
 }
 
-
+// proccesses 
 
 generateNavItems(sections)
 navBar.appendChild(fragment)  
 
+// events handler
 
 navBar.addEventListener('click',handleNavItemClick)
 
