@@ -17,9 +17,12 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+   
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 /* Typeography General*/
 h1 {
@@ -60,6 +63,7 @@ main {
 section {
     position: relative;
     min-height: 80vh;
+    
 }
 
 
