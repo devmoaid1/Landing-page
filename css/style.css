@@ -100,18 +100,19 @@ section {
 }
 .nav_item{
     color: #000;
+    text-decoration: none;
     font-size: 1em;
     height: 100%;
     padding: 10px;
     margin: auto;
     display: inline-block;
+    transition: 0.7s ease;
 }
 
 .nav_item:hover{
-    background-color: #000;
-    color: #fff;
-    height: 70%;
-    padding: 10px;
+    color: #FD057F;
+   
+    
 }
 
 /* Header Styles */
