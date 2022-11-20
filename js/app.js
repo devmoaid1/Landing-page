@@ -44,12 +44,14 @@ const updateSectionClassActive=()=>{
    if(isInViewPort(section)){
       if(section.classList.length==0){
         section.classList.add('class')
-        section.setAttribute('class',"your-active-class")
+        section.setAttribute('class',"active-class") 
+        
       }   
    }else{
-    section.classList.remove('class')
+    section.setAttribute('class',"")
    }
   }
+  
 }
 
 
