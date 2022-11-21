@@ -11,7 +11,7 @@ const generateNavItems = (sectionsList) => {
     sectionsList.forEach((section) => {
         const navItemHolder = document.createElement('li')
         const navItem = document.createElement('a') // create a anchor for nav item
-        navItem.setAttribute('class', "nav_item") // set a class for css styling
+        navItem.setAttribute('class', 'nav_item') // set a class for css styling
         navItem.setAttribute('href', '#' + section.id) // for navigation to section 
 
         navItem.textContent = section.firstElementChild.firstElementChild.textContent // content refers for section heading 
@@ -40,18 +40,19 @@ const isInViewPort = (element) => {
 
 
 // handle set active class for scrolling event
-const updateSectionClassActive = () => {
-    for (const section of sections) {
-        if (isInViewPort(section)) {
-            if (section.classList.length == 0) {
-                section.classList.add('class')
-                section.setAttribute('class', "active-class")
+const updateSectionClassActive = event => {
+  event.preventDefault()
+  for (const section of sections) {
+      if (isInViewPort(section)) {
+          if (section.classList.length == 0) {
+              section.classList.add('class')
+              section.setAttribute('class', 'active-class')
 
-            }
-        } else {
-            section.setAttribute('class', "")
-        }
-    }
+          }
+      } else {
+          section.setAttribute('class', '')
+      }
+  }
 
 }
 
