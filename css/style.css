@@ -78,6 +78,7 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+    margin: 0.5em;
     
 }
 
@@ -102,18 +103,22 @@ section {
     color: #000;
     text-decoration: none;
     font-size: 1em;
-    height: 100%;
-    padding: 10px;
-    margin: auto;
-    display: inline-block;
+    transition: 0.7s ease;
+} 
+
+.active-nav-item{
+    text-decoration: none;
+    color: #FD057F;
+    font-size: 1em;
     transition: 0.7s ease;
 }
 
-.nav_item:hover{
+ .nav_item:hover{
     color: #FD057F;
-   
     
 }
+
+
 
 /* Header Styles */
 .page__header {
